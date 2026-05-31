@@ -28,7 +28,7 @@ pomodoroIntervalBtn.addEventListener('click', () => {
 
 shortBreakIntervalBtn.addEventListener('click', () => {
   currentInterval = 'short-break';
-  timeLeft = 10 * 60;
+  timeLeft = 5 * 60;
   updateTimeLeftTextContent();
 });
 
@@ -54,7 +54,7 @@ resetBtn.addEventListener('click', () => {
   if (currentInterval === 'pomodoro') {
     timeLeft = 50 * 60;
   } else if (currentInterval === 'short-break') {
-    timeLeft = 10 * 60;
+    timeLeft = 5 * 60;
   } else {
     timeLeft = 10 * 60;
   }
