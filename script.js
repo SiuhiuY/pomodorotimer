@@ -1,5 +1,5 @@
 // Global variables
-let timeLeft = 25 * 60; // seconds
+let timeLeft = 50 * 60; // seconds
 let timerInterval;
 let currentInterval = 'pomodoro';
 let backgroundColor = '#F1F1EF'; // Default background color
@@ -22,13 +22,13 @@ const saveBtn = document.getElementById('save-btn');
 // Event listeners for interval buttons
 pomodoroIntervalBtn.addEventListener('click', () => {
   currentInterval = 'pomodoro';
-  timeLeft = 25 * 60;
+  timeLeft = 50 * 60;
   updateTimeLeftTextContent();
 });
 
 shortBreakIntervalBtn.addEventListener('click', () => {
   currentInterval = 'short-break';
-  timeLeft = 5 * 60;
+  timeLeft = 10 * 60;
   updateTimeLeftTextContent();
 });
 
@@ -52,9 +52,9 @@ startStopBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
   stopTimer();
   if (currentInterval === 'pomodoro') {
-    timeLeft = 25 * 60;
+    timeLeft = 50 * 60;
   } else if (currentInterval === 'short-break') {
-    timeLeft = 5 * 60;
+    timeLeft = 10 * 60;
   } else {
     timeLeft = 10 * 60;
   }
@@ -104,7 +104,7 @@ function startTimer() {
         currentInterval = 'long-break';
         startTimer();
       } else {
-        timeLeft = 25 * 60;
+        timeLeft = 50 * 60;
         currentInterval = 'pomodoro';
       }
     }
